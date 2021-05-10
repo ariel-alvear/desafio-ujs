@@ -1,0 +1,9 @@
+var post_title = document.createTextNode('<%= @post.title %>')
+var h3 = document.createElement('h3')
+var post_content = document.createTextNode('<%= @post.content %>')
+var p = document.createElement('p')
+
+h3.append(post_title)
+$('#new_post').append(h3)
+p.append(post_content)
+$('#new_post').append(p)
