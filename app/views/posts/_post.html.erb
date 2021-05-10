@@ -1,6 +1,6 @@
-<li><%= post.title %>
+<li id="post-<%= post.id %>"><%= post.title %>
   <%= post.content %>
   <%= link_to 'show', post, remote: true %>
   <%= link_to 'edit', edit_post_path(post), remote: true %>
-  <%= link_to 'destroy', post, remote: true, method: :delete %>
+  <%= link_to 'destroy', post, data: {remote: true, confirm: 'are you sure?'}, method: :delete %>
 </li>
